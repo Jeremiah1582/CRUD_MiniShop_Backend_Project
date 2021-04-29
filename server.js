@@ -6,9 +6,15 @@
 
 const express = require("express");
 const app = express();
+require("dotenv").config();
 
 // routers
 const indexRouter = require("./routes/indexRouter");
+
+// mongodb settings
+const mongoose = require("mongoose");
+const DB_NAME = process.env.DB_NAME;
+const DB_LINK = process.env.MONGO_LINK + DB_NAME;
 
 // settings
 app.set("view engine", "hbs");
@@ -18,6 +24,19 @@ app.use(
     extended: false,
   })
 );
+
+// database connection
+mongoose
+  .connect(DB_LINK, {
+    useUnifiedTopology: true,
+    useNewUrlParser: true,
+  })
+  .then(() => {
+    console.log(`Mongo db database is connected`);
+  })
+  .catch(() => {
+    console.log(`Mongo db is not connected`);
+  });
 
 // route
 app.use("/", indexRouter);
