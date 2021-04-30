@@ -44,6 +44,7 @@ mongoose
 
 // Import Model
 const Product = require("./models/Product");
+
 app.post("/products", (req, res) => {
   const newProducts = new Product(req.body);
   newProducts
