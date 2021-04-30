@@ -10,6 +10,7 @@ require("dotenv").config();
 
 // routers
 const indexRouter = require("./routes/indexRouter");
+const loginRouter = require("./routes/loginRouter");
 
 // mongodb settings
 const mongoose = require("mongoose");
@@ -40,6 +41,7 @@ mongoose
 
 // route
 app.use("/", indexRouter);
+app.use("/login", loginRouter);
 
 app.listen(5555, () => {
   console.log(`server is running`);
