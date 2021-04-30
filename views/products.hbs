@@ -17,3 +17,14 @@
               <button type="submit" value="Submit" class="btn">Submit</button>
        </form>
 </div>
+{{#if products}}
+<h2>Here are our products</h2>
+<ul>
+       {{#each products}}
+       <li>{{title}}</li>
+       <li>{{price}}</li>
+       <li>{{discount}}</li>
+       <li>{{quantity}}</li>
+       {{/each}}
+</ul>
+{{/if}}
