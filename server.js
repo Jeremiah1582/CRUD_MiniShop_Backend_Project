@@ -44,6 +44,7 @@ mongoose
 
 // Import Model
 const Product = require("./models/Product");
+const User = require('./models/User')
 app.post("/products", (req, res) => {
   const newProducts = new Product(req.body);
   newProducts
@@ -62,6 +63,19 @@ app.get("/products", (req, res) => {
     res.render("products", { products: data });
   });
 });
+
+app.post('/user/signUp', (req,res)=>{
+  const newUser = new User(req.body)
+  newUser.save()
+    .then(()=>{
+      console.log('you saved a user- well done !! :D')
+      res.redirect('/login')
+    }
+    )
+    .catch(()=>{console.log('did not save user');})
+  
+})
+
 
 // router
 app.use("/", indexRouter);
