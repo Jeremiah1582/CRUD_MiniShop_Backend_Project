@@ -42,6 +42,27 @@ mongoose
     console.log(`Mongo database is not connected`);
   });
 
+// Import Model
+const Product = require("./models/Product");
+app.post("/products", (req, res) => {
+  const newProducts = new Product(req.body);
+  newProducts
+    .save()
+    .then(() => {
+      console.log("data saved");
+      res.redirect("products");
+    })
+    .catch(() => {
+      console.log("error");
+    });
+});
+
+app.get("/products", (req, res) => {
+  Product.find((err, data) => {
+    res.render("products", { products: data });
+  });
+});
+
 // router
 app.use("/", indexRouter);
 app.use("/user", userRouter);
