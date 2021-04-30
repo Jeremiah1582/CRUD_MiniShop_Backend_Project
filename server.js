@@ -18,7 +18,8 @@ const productRouter = require("./routes/productRouter");
 const mongoose = require("mongoose");
 const DB_NAME = process.env.DB_NAME;
 const DB_LINK = process.env.MONGO_LINK + DB_NAME;
-
+// const DB_LINK =
+//   "mongodb+srv://admin:admin1234@arifdci.fvkse.mongodb.net/shopproject";
 // settings
 app.set("view engine", "hbs");
 app.use(express.static(`${__dirname}/public`));
