@@ -10,7 +10,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <form action='/user/signUp' method='POST'>
+        <form action='/signup' method='POST'>
              <div class="mb-3 row">
                 <label for="inputPassword" class="col-sm-2 col-form-label">First Name</label>
                 <div class="col-sm-10">
@@ -38,7 +38,7 @@
             <div class="mb-3 row">
                 <label for="inputPassword" class="col-sm-2 col-form-label">Job Title</label>
                 <div class="col-sm-10">
-                <input name='jobTitle' type="text" class="form-control" >
+                <input name='jobTitle' type="text" class="form-control" required>
                 </div>
             </div>
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
