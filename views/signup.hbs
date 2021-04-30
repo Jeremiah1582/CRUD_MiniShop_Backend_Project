@@ -1,0 +1,65 @@
+<H1>sign up form </H1>
+
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">Open modal for @mdo</button>
+
+
+{{!-- <div class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">New message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">close</button>
+      </div>
+      <div class="modal-body">
+        <form >
+             <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">First Name</label>
+                <div class="col-sm-10">
+                <input name='firstName' type="text" class="form-control" >
+                </div>
+            </div>
+             <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Last Name</label>
+                <div class="col-sm-10">
+                <input name='lastName' type="text" class="form-control" >
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                <input name='email' type="text" class="form-control-plaintext">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                <input type="password" class="form-control" >
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Job Title</label>
+                <div class="col-sm-10">
+                <input name='jobTitle' type="text" class="form-control" >
+                </div>
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div> --}}
+
+<div>
+<form action="/MiniShopProject/models/" method="post">
+  <input name="firstName" placeholder="First Name" type="text" >
+  <input name="lastName" placeholder="Last Name" type="text" >
+  <input name="password" placeholder="password" type="text" >
+  <input name="jobTitle" placeholder=" Your Job Title" type="text" >
+
+<button type="submit">Sign UP</button>
+
+</form>
+</div>
